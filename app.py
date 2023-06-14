@@ -11,7 +11,7 @@ st.sidebar.image('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQ
 df = pd.read_csv('athlete_events.csv')
 regions = pd.read_csv('noc_regions.csv')
 df = preprocessor.preprocess(df, regions)
-user_selection = st.sidebar.radio('SELECT AN OPTION', ('Medal tally','Overall analysis','Country-wise analysis','Athlete-wise analysis'))
+user_selection = st.sidebar.radio('SELECT AN OPTION', ('Athlete-wise analysis','Country-wise analysis','Medal tally','Overall analysis'))
 if user_selection == 'Medal tally':
     st.sidebar.header('Medal Tally')
     years,country = helper.country_year_list(df)
